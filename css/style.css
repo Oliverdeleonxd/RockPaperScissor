@@ -1,0 +1,222 @@
+
+
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    margin: 0;
+    text-align: center;
+  
+}
+.title {
+    margin: auto;
+    text-align: center;
+    align-content: center;
+    background-color: rgba(255, 200, 0, 0.625);
+    width: 50%;
+    font-size: 100%;
+    height: 10rem;
+    border-radius: 10px;
+
+}
+
+
+.btnPlay{
+    margin: auto;
+    margin-top: 30px;
+    width: 15rem;
+    padding: 1rem;
+    text-align: center;
+    /* display: ; */
+    /* display: flex;
+    justify-content: center; */
+    align-content: center;
+    /* align-self: center; */
+    /* justify-content: center; */
+    background-color: rgba(255, 200, 0, 0.625);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btnPlay:hover{
+
+    background-color: rgba(205, 161, 4, 0.625);
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+
+}
+
+.btnPlay h2{
+    margin-top: 2rem;
+}
+
+
+
+.btnPlay img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.play{
+    display: none;
+}
+
+.score {
+    margin: auto;
+    align-content: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.score .scoreTitle{
+    display: flex;
+}
+
+.cards {
+    
+    margin: auto;
+    text-align: center;
+    align-content: center;
+
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+    /* display: inherit; */
+
+    /* background-color: rgba(4, 151, 151, 0.181); */
+}
+
+.card {
+
+    /* display: flex; */
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 200, 0, 0.625);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.cards .card:hover {
+   
+   
+    background-color: rgba(205, 161, 4, 0.625);
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    /* cursor: ; */
+
+}
+
+
+
+img {
+    width: 10rem;
+    height: 10rem;
+}
+
+.reset {
+    margin: auto;
+    text-align: center;
+    align-content: center;
+
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+}
+
+#reset {
+   
+    display: none;
+
+}
+
+.vs {
+    
+    margin: auto;
+    text-align: center;
+    align-content: center;
+
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+
+    /* background-color: rgba(4, 151, 151, 0.181); */
+}
+
+/* .vs .card {
+   
+    width: 10rem;
+    height: 10rem;
+
+    margin: 2rem;
+    padding: 2rem;
+    background-color: rgba(255, 200, 0, 0.625);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+
+/* .vs .card:hover {
+   
+    background-color: rgba(205, 161, 4, 0.625); 
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+
+} */
+
+/* 
+
+.vs .card img {
+    width: 10rem;
+    height: 10rem;
+} */
+
+.msg {
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+    *{
+        font-size: medium;
+    }
+    .card{
+        width: 4rem;
+        width: 4rem;
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    img {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .score{
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    
+    .card{
+        width: 2rem;
+        height: 2rem;
+      
+        margin: 0.5rem;
+        padding: 2.5rem;
+    }
+
+    img {
+        width: 3rem;
+        height: 3rem;
+    }
+    .score{
+        margin: 0.5rem;
+    }
+
+
+}
+
