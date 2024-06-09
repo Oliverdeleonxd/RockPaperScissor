@@ -3,7 +3,7 @@ let scorePlayer = 0;
 let scoreComputer = 0;
 
 let options = ["Rock","Paper","Scissor"];
-let optionsPick = [ '<div class="card" id="Rock" > <img src="src/stone.png" alt=""></div>',  
+let optionsPickImages = [ '<div class="card" id="Rock" > <img src="src/stone.png" alt=""></div>',  
                     '<div class="card" id="Paper"><img src="src/file.png" alt=""></div>',
                     '<div class="card" id="Scissors"><img src="src/scissors.png" alt=""></div>'];
 
@@ -28,48 +28,39 @@ document.getElementById("play").addEventListener("click", (e)=>{
 });
 
 document.getElementById("Rock").addEventListener("click", (e) =>{
-    // playerS.innerText = scorePlayer ++; 
     playerPick.innerHTML = '<div class="card" id="Rock" > <img src="src/stone.png" alt=""></div>';
     getRoundResult("Rock");
 });
 document.getElementById("Paper").addEventListener("click", (e) =>{
-    // playerS.innerText = scorePlayer ++; 
     playerPick.innerHTML = '<div class="card" id="Paper"><img src="src/file.png" alt=""></div>';
     getRoundResult("Paper");
 });
 document.getElementById("Scissors").addEventListener("click", (e) =>{
-    // playerS.innerText = scorePlayer ++; 
     playerPick.innerHTML = '<div class="card" id="Scissors"><img src="src/scissors.png" alt=""></div>'
     getRoundResult("Scissors");
 }); 
 
 
 btnReset.addEventListener("click", (e)=>{
-    reset();
+    resetGame();
 });
 
 function comproResult() {
 
-    // getRoundResult(pick);
-
     if (scorePlayer === 3) {
-       // reset();
+
         msg.innerText = "User win the game";
         cards[0].style.display = "none";
         console.log(`Player: ${scorePlayer} | Computer: ${scoreComputer}` );
-        //play.style.display = "block";
         document.getElementById("reset").style.display = "flex";
 
     }else if(scoreComputer === 3) {
-        //reset();
         msg.innerText = "Computer win the game";
         cards[0].style.display = "none";
         console.log(`Player: ${scorePlayer} | Computer: ${scoreComputer}` );
-        // play.style.display = "block";
 
         document.getElementById("reset").style.display = "flex";
-    }
-    
+    }   
 
 }
 
@@ -96,62 +87,38 @@ function userWins(userPick,computerPick) {
     const computerPick = getRandonComputer();
 
     for (let index = 0; index < options.length; index++) {
+
         document.getElementsByClassName("cards")[0].style.display = "none";
-       // const element = array[index];
-       setTimeout(() => {
-         computePickHtml.innerHTML = optionsPick[index];   
-        console.log(options[index]);
-    }, index * 500); 
-    setTimeout(() => { 
-        //  console.log( "holaa" );
-         let pick = options.indexOf(computerPick);
-        computePickHtml.innerHTML = optionsPick[pick];  
+
+        setTimeout(() => {
+        computePickHtml.innerHTML = optionsPickImages[index];   
+
+        }, index * 500); 
+        setTimeout(() => { 
+
+        let pick = options.indexOf(computerPick);
+        computePickHtml.innerHTML = optionsPickImages[pick];  
         document.getElementsByClassName("cards")[0].style.display = "flex";
         comproResult();
-    }, options.length * 500);
-    //setTimeout( 3000);
-    
+
+        }, options.length * 500);
    
-    
-    }     
-    console.log("Computer pick: "+computerPick);
-    
-    // console.log( "holaa" + options.indexOf(computerPick));
-    // {
-       
-    //     setInterval(() => {
-    //         // computePickHtml.innerHTML = iterator;
-    //         console.log(iterator);
-    //     }, 5000);
- 
-    // }
+    }
 
-
-
-    console.log("User pick: "+userPick);
-   
-    
         
         if (userWins(userPick,computerPick)) {
             scorePlayer++;
             playerS.innerText  = scorePlayer;
-            // console.log("User win");
             msg.innerText = "User win";
 
         }else if (userPick === computerPick) {
-            // console.log("Empate")
             msg.innerText = "Tie";
         } else {
             scoreComputer++;
             computerS.innerText  = scoreComputer;
-            // console.log("Computer wins")
             msg.innerText = "Computer win";
             
         }
-
-        
-
-
     
 }
 
@@ -159,7 +126,8 @@ function userWins(userPick,computerPick) {
 
 
 
-function reset() {
+
+function resetGame() {
     
     scoreComputer = 0;
     playerS.innerText  = 0;
@@ -171,9 +139,6 @@ function reset() {
 
 
 }
-
-
-// await sleep(<duration>)
 
 
 
